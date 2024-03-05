@@ -1,0 +1,29 @@
+{
+  "name": "client",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "serve": "vite --port 3333 --host",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "axios": "^1.6.7",
+    "less": "^4.2.0",
+    "pinia": "^2.1.7",
+    "vite-plugin-pages": "^0.32.0",
+    "vue": "^3.4.19",
+    "vue-router": "^4.3.0"
+  },
+  "devDependencies": {
+    "@unocss/preset-uno": "^0.58.5",
+    "@unocss/transformer-directives": "^0.58.5",
+    "@vitejs/plugin-vue": "^5.0.4",
+    "nodemon": "^3.1.0",
+    "unocss": "^0.58.5",
+    "vite": "^5.1.4",
+    "vite-plugin-vue-layouts": "^0.11.0"
+  }
+}

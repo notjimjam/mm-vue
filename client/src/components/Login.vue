@@ -1,7 +1,11 @@
 <template>
-
+	{{ authUrl }}
+	<a :href="authUrl">
+		Login in with Spotify
+	</a>
 </template>
 
 <script setup>
-	const AUTH_URL =
+	import config from '../../cfg/config.js';
+	const authUrl = config.authUrl;
 </script>

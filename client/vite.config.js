@@ -6,6 +6,7 @@ import presetUno from '@unocss/preset-uno';
 import transformerDirective from '@unocss/transformer-directives';
 import { presetIcons } from 'unocss';
 import Layouts from 'vite-plugin-vue-layouts';
+import AutoImport from 'unplugin-auto-import/vite';
 
 const lengths = {
 	mini:   '3px',
@@ -32,6 +33,13 @@ export default defineConfig({
 	  
 	  Layouts({
 		  layoutsDir: 'src/layouts',
+	  }),
+	  AutoImport({
+		  imports: ['vue'],
+		  dirs: [
+			  './src/**'
+		  ],
+		  vueTemplate: true,
 	  }),
 	  
 	  // see: https://github.com/unocss/unocss

@@ -3,13 +3,15 @@
 		<RouterView />
 	</template>
 	<template v-else>
-		LOADING
+		<Loading />
 	</template>
 </template>
 
 <script setup>
 	import { useRoute, useRouter } from 'vue-router';
 	import { onMounted, ref } from 'vue';
+	import '@/assets/styles.less';
+	import Loading from '@/components/Loading.vue';
 	
 	const router = useRouter();
 	const route = useRoute();

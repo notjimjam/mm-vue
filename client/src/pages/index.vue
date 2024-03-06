@@ -8,8 +8,8 @@
 </template>
 
 <script setup>
-	import Login from '../components/Login.vue';
-	import Dashboard from '../components/Dashboard.vue';
+	import Login from '@/components/Login.vue';
+	import Dashboard from '@/components/Dashboard.vue';
 	
 	const code = ref('');
 	

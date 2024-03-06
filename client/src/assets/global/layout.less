@@ -1,0 +1,70 @@
+/**
+ * The overall layout of the app - header, article, footer.
+ *
+ * @markup:
+ *     main#main
+ *         header#header
+ *         article#article
+ *         footer#footer
+ */
+
+main#main {
+	min-height: 100vh;
+	height: 100vh;
+	max-height: 100vh;
+	overflow: hidden;
+	
+	article {
+		position: relative;
+	}
+	
+	&.layout-default {
+		display: grid;
+		grid-template-areas:
+			"header"
+			"article"
+			"footer";
+		grid-template-columns: 1fr;
+		grid-template-rows: var(--header-height) calc(100vh - var(--header-height) - var(--footer-height)) var(--footer-height);
+	}
+	
+	header#header {
+		grid-area: header;
+		padding: 0 var(--length-medium);
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		gap: var(--length-medium);
+		
+		background: mediumpurple;
+	}
+	
+	article#article {
+		grid-area: article;
+		overflow: auto;
+	}
+	
+	footer#footer {
+		grid-area: footer;
+		overflow: auto;
+		padding: 0 var(--length-medium);
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		
+		
+		background: mediumseagreen;
+	}
+}
+
+
+///
+/// Non-structural styles
+///
+
+html {
+	background: cornflowerblue;
+	color: var(--text-dark);
+}

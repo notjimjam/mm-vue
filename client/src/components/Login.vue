@@ -1,5 +1,4 @@
 <template>
-	{{ authUrl }}
 	<a :href="authUrl">
 		Login in with Spotify
 	</a>
